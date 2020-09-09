@@ -14,19 +14,20 @@ public class Main {
 
         ArrayList<Students> Student = new ArrayList<>();
         //ArrayList<Session> list = new ArrayList<Session>();
-
+        ArrayList<Session> list = new ArrayList<>();
+        list.add(new Session("Match","Daniel Kim",4));
 
         Faculty.list.add("ICS");
         Faculty.list.add("IPTDM");
         Faculty.list.add("IIBRT");
         Faculty.list.add("IEE");
-        String name = "name";
-        int mark = 5;
+
 
 //        Student.add(new Students("Andrew", 5, 0, 5,
 //                new Session("name","name", 4 )));
+        Student.add(new Students("Alex Rotar",(byte)1,2,(byte)1,list));
 
-
+        System.out.println(Student);
 
     }
 

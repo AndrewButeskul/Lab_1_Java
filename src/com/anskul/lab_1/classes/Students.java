@@ -8,21 +8,36 @@ public class Students {
     private byte record_number;
     private int faculty_id;
     private byte course_number;
-    private Session subject;
+    private ArrayList<Session> sessions;
 
 
-    public Students(String name, byte record_number, int faculty_id, byte course_number, Session subject){
+    public ArrayList<Session> getSessions() {
+        return sessions;
+    }
+
+    public void setSessions(ArrayList<Session> sessions) {
+        this.sessions = sessions;
+    }
+
+//    @Override
+//    public String List(){
+//        for (Session sessions: ) {
+//
+//        }
+//    }
+
+    public Students(String name, byte record_number, int faculty_id, byte course_number, ArrayList<Session> sessions){
         this.name = name;
         this.record_number = record_number;
         this.faculty_id = faculty_id;
         this.course_number = course_number;
-        this.subject = subject;
+        this.sessions = sessions;
     }
 
     @Override
     public String toString(){
         return "Name: " + name + "\n" + "Record number: " + record_number +
-                "\n" + "Faculty: " + Faculty.list.get(faculty_id) + "\n" + "Cource number: " + course_number + subject.toString();
+                "\n" + "Faculty: " + Faculty.list.get(faculty_id) + "\n" + "Cource number: " + course_number + sessions.toString();
     }
 
 //---------------
@@ -76,11 +91,4 @@ public class Students {
     }
 
 
-    public Session getSubject() {
-        return subject;
-    }
-
-    public void setSubject(Session subject) {
-        this.subject = subject;
-    }
 }

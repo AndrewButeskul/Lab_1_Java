@@ -18,6 +18,7 @@ public class Session {
         return "\nTeacher name: " + teacher_name + "\nSubject: " + subject_name + "\nMark: " + mark;
     }
 
+
     public String getSubject_name() {
         return subject_name;
     }
