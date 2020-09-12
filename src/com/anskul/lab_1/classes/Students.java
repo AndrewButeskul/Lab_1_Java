@@ -5,11 +5,10 @@ import java.util.ArrayList;
 public class Students {
 
     private String name;
-    private byte record_number;
+    private int record_number;
     private int faculty_id;
-    private byte course_number;
+    private int course_number;
     private ArrayList<Session> sessions;
-
 
     public ArrayList<Session> getSessions() {
         return sessions;
@@ -19,14 +18,8 @@ public class Students {
         this.sessions = sessions;
     }
 
-//    @Override
-//    public String List(){
-//        for (Session sessions: ) {
-//
-//        }
-//    }
 
-    public Students(String name, byte record_number, int faculty_id, byte course_number, ArrayList<Session> sessions){
+    public Students(String name, int record_number, int faculty_id, int course_number, ArrayList<Session> sessions){
         this.name = name;
         this.record_number = record_number;
         this.faculty_id = faculty_id;
@@ -36,23 +29,10 @@ public class Students {
 
     @Override
     public String toString(){
-        return "Name: " + name + "\n" + "Record number: " + record_number +
-                "\n" + "Faculty: " + Faculty.list.get(faculty_id) + "\n" + "Cource number: " + course_number + sessions.toString();
+        return "\n-----------------------------------------\nName: " + name + "\n" + "Record number: " + record_number +
+                "\n" + "Faculty: " + Faculty.list.get(faculty_id) + "\n" + "Cource number: " + course_number + "\n" + sessions.toString() + "\n";
     }
 
-//---------------
-//    public void Input(Students student){
-//        Scanner keyboard = new Scanner(System.in);
-//
-//        System.out.println("Name and inithial:");
-//        student.set_Name(keyboard.nextLine());
-//        System.out.println("Record number:");
-//        student.set_Record(keyboard.nextByte());
-//        System.out.println("Select your Faculty:");
-//      //  student.set_Faculty(keyboard.nextByte()); +++
-//        System.out.println("Course number:");
-//        student.set_Course(keyboard.nextByte());
-//    }
 
     public boolean Check_name(String name) {
         return name.matches("[а-яА-Я]+");
@@ -62,7 +42,7 @@ public class Students {
         return name;
     }
 
-    public byte get_Record(){
+    public int get_Record(){
         return record_number;
     }
 
@@ -70,7 +50,7 @@ public class Students {
         return faculty_id;
     }
 
-    public byte get_Course(){
+    public int get_Course(){
         return course_number;
     }
 
@@ -78,7 +58,7 @@ public class Students {
         this.name = name;
     }
 
-    public void set_Record(byte record_number){
+    public void set_Record(int record_number){
         this.record_number = record_number;
     }
 
@@ -86,7 +66,7 @@ public class Students {
         this.faculty_id = faculty_id;
     }
 
-    public void set_Course(byte course_number){
+    public void set_Course(int course_number){
         this.course_number = course_number;
     }
 

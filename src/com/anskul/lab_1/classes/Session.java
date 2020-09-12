@@ -1,41 +1,24 @@
 package com.anskul.lab_1.classes;
 
-import java.util.function.IntFunction;
-
 public class Session {
-    private String subject_name;
-    private String teacher_name;
+    private int subject_id;
+    private int teacher_id;
     private int mark;
 
-    public Session(String subject_name, String teacher_name, int mark) {
-        this.subject_name = subject_name;
-        this.teacher_name = teacher_name;
+    public Session(int mark, int subject_id, int teacher_id) {
+        this.subject_id = subject_id;
+        this.teacher_id = teacher_id;
         this.setMark(mark);
     }
 
     @Override
     public String toString(){
-        return "\nTeacher name: " + teacher_name + "\nSubject: " + subject_name + "\nMark: " + mark;
+        return "--------------\nTeacher name: " + Teachers.teacher.get(teacher_id) + "\nSubject: " +
+                Subjects.subject.get(subject_id) + "\nMark: " + mark + "\n";
     }
 
 
-    public String getSubject_name() {
-        return subject_name;
-    }
-
-    public void setSubject_name(String subject_name) {
-        this.subject_name = subject_name;
-    }
-
-    public String getTeacher_name() {
-        return teacher_name;
-    }
-
-    public void setTeacher_name(String teacher_name) {
-        this.teacher_name = teacher_name;
-    }
-
-    public int getMark() {
+   public int getMark() {
         return mark;
     }
 
@@ -44,5 +27,21 @@ public class Session {
             this.mark = mark;
         else
             this.mark = -1;
+    }
+
+    public int getSubject_id() {
+        return subject_id;
+    }
+
+    public void setSubject_id(int subject_id) {
+        this.subject_id = subject_id;
+    }
+
+    public int getTeacher_id() {
+        return teacher_id;
+    }
+
+    public void setTeacher_id(int teacher_id) {
+        this.teacher_id = teacher_id;
     }
 }
