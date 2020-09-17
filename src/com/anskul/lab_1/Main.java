@@ -27,19 +27,21 @@ public class Main {
 
 
         ArrayList<Students> Student = new ArrayList<>();
-        ArrayList<Session> session = new ArrayList<>();
+        //Students Student = new Students();
 
-        session.add(new Session(5,2,4));
-        session.add(new Session(2,1,2));
-        session.add(new Session(5,1,1));
-        session.add(new Session(4,4,0));
-        session.add(new Session(3,3,3));
+//        session.add(new Session(5,2,4));
+//        session.add(new Session(2,1,2));
+//        session.add(new Session(5,1,1));
+//        session.add(new Session(4,4,0));
+//        session.add(new Session(5,3,3));
+//
+//        Student.add(new Students("Alex Rotar",1,2,1,session));
+//        Student.add(new Students("Mark Kendi",4,3,4,session));
 
-        Student.add(new Students("Alex Rotar",1,2,1,session));
-        Student.add(new Students("Mark Kendi",4,3,4,session));
+        Student.add(new Students());
+        Student.get(0).Input();
 
         System.out.println(Student);
-
     }
 
 }
